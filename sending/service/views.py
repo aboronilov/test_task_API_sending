@@ -28,7 +28,6 @@ class MailingViewSet(viewsets.ModelViewSet):
         """
         queryset = Mailing.objects.all()
         mailing = get_object_or_404(queryset, pk=pk)
-        # сюда можно добавить логики
         serializer = MailingSerializer(mailing)
         return Response(serializer.data)
 
@@ -38,6 +37,5 @@ class MailingViewSet(viewsets.ModelViewSet):
         Сводные данные по всем рассылкам
         """
         queryset = Mailing.objects.all()
-        # сюда можно добавить логики
         serializer = MailingSerializer(queryset, many=True)
         return Response(serializer.data)
