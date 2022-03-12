@@ -19,11 +19,13 @@
     python manage.py migrate
 ```
 
-Запусти проект:
+Запустить проект:
 
 ```
     python manage.py runserver
 ```
+
+В файле .env должен быть TOKEN и ссылка URL https://probe.fbrq.cloud/v1/send/
 
 **Техзадание:** 
 [https://www.craft.do/s/n6OVYFVUpq0o6L](https://www.craft.do/s/n6OVYFVUpq0o6L)

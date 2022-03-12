@@ -1,13 +1,17 @@
 import requests
 import os
 import time
-
+from dotenv import load_dotenv
 from .models import Mailing, Client, Message
+
+load_dotenv()
+URL = os.getenv("URL")
+TOKEN = os.getenv("TOKEN")
 
 
 def send_message(ids,
-                 url=os.environ.get('URL'),
-                 token=os.environ.get('JWT')):
+                 url=URL,
+                 token=TOKEN):
     """
         отправка сообщения клиентам
         через внешний АПИ сервис c JWT-авторизацией
